@@ -14,39 +14,39 @@ export default function Projects() {
   const projects = [
     {
       title: "Website-IOT",
-      description: "A comprehensive IoT management platform built with modern PHP framework, featuring real-time data monitoring and device control capabilities.",
-      longDescription: "This project demonstrates full-stack development skills with Laravel backend, featuring IoT device integration, real-time dashboard, and comprehensive data analytics. The system handles multiple sensor inputs and provides intuitive control interfaces for IoT devices.",
+      description: "Real-time IoT monitoring platform that receives and displays random sensor data from Arduino IDE, featuring live data visualization and device status tracking.",
+      longDescription: "This IoT monitoring platform demonstrates real-time data communication between Arduino devices and web applications. The system receives random sensor data transmitted from Arduino IDE and displays it through an intuitive dashboard with live charts, data logging, and device status monitoring. Built with Laravel backend for robust data handling and real-time updates.",
       tech: ["PHP", "Laravel", "MySQL", "Arduino IDE", "ESP32", "HCSR04", "DHT-22"],
       github: "https://github.com/Daarns/Website-IOT/tree/main",
       demo: "#",
       image: "/assets/project/Web-IOT.png",
       status: "Completed",
       year: "2024",
-      category: "Web Development"
+      category: "IoT Development"
     },
     {
       title: "Nutrihealth",
-      description: "A comprehensive IoT management platform built with modern PHP framework, featuring real-time data monitoring and device control capabilities.",
-      longDescription: "This project demonstrates full-stack development skills with Laravel backend, featuring IoT device integration, real-time dashboard, and comprehensive data analytics. The system handles multiple sensor inputs and provides intuitive control interfaces for IoT devices.",
+      description: "Healthcare consultation platform featuring WhatsApp doctor integration, health forums, weight monitoring, and medical articles for comprehensive wellness management.",
+      longDescription: "Comprehensive healthcare platform that bridges the gap between patients and medical professionals. Features include direct WhatsApp integration for doctor consultations, community health forums for peer discussions, personal weight tracking system, and curated medical articles. The platform provides a user-friendly interface for health management while maintaining easy access to professional medical advice.",
       tech: ["PHP", "Laravel", "MySQL"],
       github: "https://github.com/Daarns/NutriHealth",
       demo: "#",
-      image: "/assets/projects/",
+      image: "/assets/project/Nutrihealth.png",
       status: "Completed",
       year: "2024",
-      category: "Web Development"
+      category: "Healthcare Web Application"
     },
     {
       title: "Web Scraping Platform", 
-      description: "High-performance web scraping solution using Python and FastAPI for automated data collection and processing.",
-      longDescription: "Advanced web scraping platform featuring async processing, data validation, and RESTful API endpoints. Built with modern Python frameworks for scalability and performance optimization.",
+      description: "AI-powered academic journal scraper with Gemini AI query optimization, designed for efficient research paper discovery and data extraction.",
+      longDescription: "Advanced web scraping platform specifically designed for academic research. The system uses Gemini AI to optimize search queries, ensuring more relevant and accurate journal discovery. Features include intelligent query processing, automated data extraction, result filtering, and comprehensive journal database management. Built with modern Python frameworks for scalability and performance optimization.",
       tech: ["Python", "FastAPI", "BeautifulSoup", "Selenium", "Gemini API"],
       demo: "#",
       github: "https://github.com/Daarns/Journal-web-scraping",
       image: "/assets/project/homepage.png",
-      status: "In Development",
+      status: "Completed - Needs Optimization",
       year: "2024",
-      category: "Data Engineering"
+      category: "Web Development"
     },
     {
       title: "Portfolio Website",
@@ -58,19 +58,19 @@ export default function Projects() {
       image: "/assets/project/portofolio.png",
       status: "Completed",
       year: "2025",
-      category: "Static Frontend Website"
+      category: "Frontend Development"
     },
     {
       title: "E-Commerce Platform",
-      description: "Complete e-commerce solution with payment integration and inventory management system.",
-      longDescription: "Comprehensive e-commerce platform featuring product catalog, shopping cart, payment processing, and order management system.",
+      description: "Full-featured marketplace platform where buyers can become sellers, with comprehensive admin controls for product approval, shipping management, and user role transitions.",
+      longDescription: "Comprehensive e-commerce marketplace that enables dynamic user role switching - buyers can seamlessly become sellers. Features include product catalog management, secure payment processing, shipping coordination, and robust admin dashboard for controlling product approvals, user role transitions, and marketplace operations. The platform supports multi-vendor functionality with complete order management system.",
       tech: ["Next.js", "FastAPI", "Docker", "PostgreSQL"],
       demo: "https://ecommerce-pro-self.vercel.app/",
       github: "#",
       image: "/assets/project/e-commerce.png",
       status: "In Development",
       year: "2025",
-      category: "Web Development"
+      category: "E-Commerce Development"
     },
   ];
 
