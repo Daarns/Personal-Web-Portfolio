@@ -63,8 +63,7 @@ export default function Hero() {
             <ScrollVelocity
               scrollContainerRef={null}
               texts={[
-                "Web Developer",
-                "Backend Developer",
+                "Junior Web Developer"
               ]}
               velocity={50}
               numCopies={6}
