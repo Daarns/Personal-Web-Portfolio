@@ -85,14 +85,16 @@ const Footer = () => {
   ];
 
   const techStack = [
-    "JavaScript",
+    "Docker",
     "PHP",
     "Python",
     "Laravel",
-    "CodeIgniter",
+    "Next.js",
     "FastAPI",
     "MySQL",
     "Figma",
+    "Claude AI",
+    "React",
   ];
 
   // Don't render until mounted to prevent hydration mismatch
