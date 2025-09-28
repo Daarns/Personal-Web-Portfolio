@@ -6,24 +6,20 @@ import ScrollVelocity from "../../app/components/TextAnimations/ScrollVelocity/S
 export default function Hero() {
   const [mounted, setMounted] = useState(false);
   const [activeTooltip, setActiveTooltip] = useState<string | null>(null);
-  const [activeIcon, setActiveIcon] = useState<string | null>(null); // Untuk state warna yang persisten
+  const [activeIcon, setActiveIcon] = useState<string | null>(null);
 
   useEffect(() => {
     setMounted(true);
   }, []);
 
   const handleMobileIconInteraction = (iconType: string) => {
-    // Toggle tooltip untuk mobile
     if (activeTooltip === iconType) {
-      // Jika sudah aktif, hide tooltip dan reset active state
       setActiveTooltip(null);
       setActiveIcon(null);
     } else {
-      // Show tooltip dan set active state
       setActiveTooltip(iconType);
       setActiveIcon(iconType);
-      
-      // Auto hide setelah 5 detik (lebih lama untuk mobile)
+
       setTimeout(() => {
         setActiveTooltip(null);
         setActiveIcon(null);
@@ -281,9 +277,28 @@ export default function Hero() {
           >
             View My Work
           </button>
-          <button className="px-8 py-3 border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white active:bg-blue-700 active:text-white rounded-lg font-medium transition-all duration-200 hover:scale-105 active:scale-95">
-            Download CV
-          </button>
+  <a
+    href="https://drive.google.com/file/d/1DAIXiYXGdkf6rJU6YZKfaXg9hAHUHTh9/view?usp=sharing"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-flex items-center justify-center gap-2 px-8 py-3 border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white active:bg-blue-700 active:text-white rounded-lg font-medium transition-all duration-200 hover:scale-105 active:scale-95"
+  >
+    <svg 
+      xmlns="http://www.w3.org/2000/svg" 
+      className="w-4 h-4" 
+      fill="none" 
+      viewBox="0 0 24 24" 
+      stroke="currentColor"
+    >
+      <path 
+        strokeLinecap="round" 
+        strokeLinejoin="round" 
+        strokeWidth={2} 
+        d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" 
+      />
+    </svg>
+    Download CV
+  </a>
         </div>
       </div>
     </section>
