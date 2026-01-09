@@ -3,6 +3,9 @@ import type {NextConfig} from "next";
 const nextConfig: NextConfig = {
   devIndicators: false,
 
+  turbopack: {
+  },
+
   webpack: (config) => {
     config.module.rules.push({
       test: /\.(glb|gltf)$/,
