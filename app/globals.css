@@ -1,29 +1,262 @@
 @import "tailwindcss";
 
 :root {
-  /* Dark theme only - Deep Navy & Blue Elegant */
-  --background: rgb(2, 3, 19); /* Deep navy seperti yang diminta */
-  --foreground: #f8fafc; /* Light gray text */
-  --card: rgb(15, 16, 32); /* Slightly lighter navy for cards */
-  --card-foreground: #f8fafc; /* Light text on cards */
-  --primary: #60a5fa; /* Bright blue untuk accent (blue-400) */
-  --primary-foreground: rgb(2, 3, 19); /* Navy text on blue */
-  --secondary: rgb(25, 26, 42); /* Dark navy secondary */
-  --secondary-foreground: #e2e8f0; /* Light gray */
-  --muted: rgb(20, 21, 37); /* Dark muted background */
-  --muted-foreground: #94a3b8; /* Medium-light gray */
-  --accent: rgb(96, 165, 250, 0.1); /* Transparent blue accent */
-  --accent-foreground: #60a5fa; /* Bright blue text */
-  --border: rgb(40, 41, 57); /* Dark border */
-  --input: rgb(40, 41, 57); /* Input border */
-  --ring: #60a5fa; /* Focus ring */
+  /* ============================================
+     RETRO THEME - Warm Vintage Colors
+     ============================================ */
+  
+  /* Main Colors - Warm Retro Palette */
+  --background: #FFF8E7; /* Cream/Vanilla */
+  --foreground: #2B2118; /* Dark Brown */
+  
+  /* Card & Surface */
+  --card: #FFFFFF; /* Pure White */
+  --card-foreground: #2B2118;
+  
+  /* Primary - Retro Orange/Coral */
+  --primary: #FF6B35; /* Vibrant Orange */
+  --primary-foreground: #FFFFFF;
+  
+  /* Secondary - Vintage Teal */
+  --secondary: #004E64; /* Deep Teal */
+  --secondary-foreground: #FFFFFF;
+  
+  /* Accent - Warm Yellow */
+  --accent: #FFB627; /* Golden Yellow */
+  --accent-foreground: #2B2118;
+  
+  /* Muted */
+  --muted: #F5E6D3; /* Light Beige */
+  --muted-foreground: #6B5D52; /* Medium Brown */
+  
+  /* Borders */
+  --border: #E8D5C4; /* Soft Beige Border */
+  --input: #E8D5C4;
+  --ring: #FF6B35;
+  
   --radius: 0.5rem;
   
-  /* Status colors untuk dark theme */
-  --success: #34d399; /* Keep green for success only */
-  --warning: #fbbf24;
-  --error: #f87171;
-  --info: #60a5fa;
+  /* Status Colors - Retro Style */
+  --success: #25A18E; /* Teal Green */
+  --warning: #FFB627; /* Golden Yellow */
+  --error: #FF6B35; /* Coral Red */
+  --info: #004E64; /* Deep Teal */
+}
+
+/* Dark Mode - Retro Night Theme */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #1A1612; /* Deep Brown-Black */
+    --foreground: #F5E6D3; /* Light Cream */
+    
+    --card: #2B2118; /* Dark Brown */
+    --card-foreground: #F5E6D3;
+    
+    --primary: #FF8C61; /* Lighter Coral */
+    --primary-foreground: #1A1612;
+    
+    --secondary: #00A8CC; /* Bright Teal */
+    --secondary-foreground: #1A1612;
+    
+    --accent: #FFD166; /* Soft Yellow */
+    --accent-foreground: #1A1612;
+    
+    --muted: #3D3228; /* Muted Brown */
+    --muted-foreground: #C4B5A0;
+    
+    --border: #4A3F35;
+    --input: #4A3F35;
+  }
+}
+
+/* Base Styles */
+* {
+  border-color: var(--border);
+}
+
+html {
+  background-color: var(--background);
+  color: var(--foreground);
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Utility Classes */
+.bg-background { background-color: var(--background) !important; }
+.text-foreground { color: var(--foreground) !important; }
+.bg-card { background-color: var(--card) !important; }
+.text-card-foreground { color: var(--card-foreground) !important; }
+.bg-primary { background-color: var(--primary) !important; }
+.text-primary { color: var(--primary) !important; }
+.text-primary-foreground { color: var(--primary-foreground) !important; }
+.bg-secondary { background-color: var(--secondary) !important; }
+.text-secondary { color: var(--secondary) !important; }
+.bg-accent { background-color: var(--accent) !important; }
+.text-accent { color: var(--accent) !important; }
+.bg-muted { background-color: var(--muted) !important; }
+.text-muted-foreground { color: var(--muted-foreground) !important; }
+.border-border { border-color: var(--border) !important; }
+
+/* Retro Decorative Elements */
+.retro-dots {
+  background-image: radial-gradient(circle, var(--border) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.retro-grid {
+  background-image: 
+    linear-gradient(var(--border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--border) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+/* Retro Card Shadow */
+.retro-shadow {
+  box-shadow: 
+    8px 8px 0px var(--border),
+    8px 8px 0px 2px var(--foreground);
+}
+
+.retro-shadow-sm {
+  box-shadow: 
+    4px 4px 0px var(--border),
+    4px 4px 0px 1px var(--foreground);
+}
+
+/* Retro Button */
+.retro-button {
+  position: relative;
+  background: var(--primary);
+  color: var(--primary-foreground);
+  border: 3px solid var(--foreground);
+  box-shadow: 4px 4px 0px var(--foreground);
+  transition: all 0.1s ease;
+}
+
+.retro-button:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px var(--foreground);
+}
+
+.retro-button:active {
+  transform: translate(4px, 4px);
+  box-shadow: 0px 0px 0px var(--foreground);
+}
+
+/* Scrollbar - Retro Style */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--muted);
+  border-left: 2px solid var(--border);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+  border: 2px solid var(--foreground);
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--accent);
+}
+
+/* Selection - Retro Highlight */
+::selection {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+}
+
+/* Animations */
+@keyframes retro-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes retro-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+@keyframes retro-slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-retro-bounce {
+  animation: retro-bounce 2s ease-in-out infinite;
+}
+
+.animate-retro-pulse {
+  animation: retro-pulse 2s ease-in-out infinite;
+}
+
+.animate-retro-slide {
+  animation: retro-slide-in 0.6s ease-out;
+}
+
+/* Typography - Retro Headers */
+.retro-heading {
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+/* Noise Texture Overlay (Optional Retro Effect) */
+.retro-noise::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' /%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E");
+  pointer-events: none;
+  opacity: 0.3;
+}
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+  .retro-shadow {
+    box-shadow: 
+      4px 4px 0px var(--border),
+      4px 4px 0px 1px var(--foreground);
+  }
+  
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+}
+
+/* Hide Scrollbar but keep functionality */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Reduce Motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 /* Force override ALL Tailwind utilities */

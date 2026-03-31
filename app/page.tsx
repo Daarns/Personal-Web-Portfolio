@@ -1,17 +1,15 @@
-import { 
-  Hero, 
-  About, 
-  Skills, 
-  Projects, 
-} from '@/components/sections'
+import HeroNew from '@/components/sections/HeroNew'
+import AboutNew from '@/components/sections/AboutNew'
+import Skills from '@/components/sections/Skills'
+import ProjectsNew from '@/components/sections/ProjectsNew'
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-background text-foreground">
-      <Hero />
-      <div id="about"><About /></div>
+      <HeroNew />
+      <div id="about"><AboutNew /></div>
       <div id="skills"><Skills /></div>
-      <div id="projects"><Projects /></div>
+      <div id="projects"><ProjectsNew /></div>
     </main>
   )
 }

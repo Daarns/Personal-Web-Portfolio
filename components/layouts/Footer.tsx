@@ -81,7 +81,6 @@ const Footer = () => {
     { name: "About", href: "#about" },
     { name: "Skills", href: "#skills" },
     { name: "Projects", href: "#projects" },
-    { name: "Contact", href: "#contact" },
   ];
 
   const techStack = [
@@ -135,10 +134,10 @@ const Footer = () => {
                       href={social.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group relative p-3 bg-secondary rounded-lg hover:bg-primary/20 transition-all duration-300 hover:scale-110"
+                      className="group relative p-3 bg-muted border-2 border-foreground hover:bg-primary hover:border-primary transition-all duration-300 hover:scale-110"
                       title={social.description}
                     >
-                      <Icon className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors duration-300" />
+                      <Icon className="w-5 h-5 text-foreground group-hover:text-white transition-colors duration-300" />
 
                       {/* Tooltip */}
                       <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-background border border-border rounded-md px-2 py-1 text-xs text-foreground opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap">
