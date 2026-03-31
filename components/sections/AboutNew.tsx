@@ -59,7 +59,6 @@ export default function AboutNew() {
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     className="object-cover object-center"
                     priority
-                    quality={90}
                   />
                   
                   {/* Retro Corner Accents */}
@@ -221,7 +220,6 @@ export default function AboutNew() {
                         alt="BNSP Junior Web Developer Certificate"
                         fill
                         className="object-contain p-2"
-                        quality={85}
                         sizes="(max-width: 768px) 340px, 450px"
                       />
                       

@@ -156,7 +156,6 @@ export default function ProjectsNew() {
                       fill
                       className="object-cover group-hover:scale-110 transition-transform duration-500"
                       sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      quality={85}
                     />
                   )}
                   
@@ -308,7 +307,6 @@ export default function ProjectsNew() {
                         fill
                         className="object-cover"
                         sizes="(max-width: 768px) 100vw, 80vw"
-                        quality={90}
                       />
                     </div>
                   )}
