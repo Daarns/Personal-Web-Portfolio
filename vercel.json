@@ -1,6 +1,8 @@
 {
-  "buildCommand": "node scripts/build-info.js && next build",
-  "outputDirectory": ".next",
-  "framework": "nextjs",
-  "installCommand": "npm install"
+  "build": {
+    "env": {
+      "NODE_ENV": "production"
+    }
+  },
+  "outputDirectory": ".next"
 }
