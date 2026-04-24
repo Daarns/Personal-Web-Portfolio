@@ -92,7 +92,7 @@ export default function HeroNew() {
                 ease: "easeInOut"
               }}
             >
-              <Sparkles className="w-5 h-5 text-primary" />
+     
             </motion.div>
             <span className="text-sm font-mono uppercase tracking-wider text-foreground font-bold">
               Hello, I'm
