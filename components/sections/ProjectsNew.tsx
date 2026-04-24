@@ -14,13 +14,13 @@ export default function ProjectsNew() {
     {
       title: "E-Commerce Platform",
       description:
-        "Multi-vendor marketplace with buyer-to-seller role switching.",
+        "A scalable, full-stack e-commerce platform built with Golang and Next.js, featuring secure checkout and an interactive admin dashboard.",
       longDescription:
-        "Full-featured marketplace where buyers can become sellers, with comprehensive admin controls for product approval, shipping, and user role management.",
+        "An ongoing, production-ready e-commerce application engineered with Clean Architecture. It features JWT role-based access control, advanced stock management using optimistic locking, and a seamless shopping cart experience. The platform is currently integrating the Midtrans payment gateway, utilizing Ngrok for real-time local webhook testing to automate order status synchronization.",
       tech: ["Gin", "Redis", "Docker", "PostgreSQL", "Next.js"],
       demo: "https://ecommerce-pro-self.vercel.app/",
       github: "#",
-      image: "/assets/Project/e-commerce.png",
+      image: "/assets/Project/e-commerce-platform.png",
       status: "In Progress",
       year: "2026",
       category: "E-Commerce",
