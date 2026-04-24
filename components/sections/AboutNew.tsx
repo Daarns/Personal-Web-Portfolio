@@ -79,7 +79,7 @@ export default function AboutNew() {
                   </div>
                   <div className="px-4 py-2 bg-card border-2 border-foreground text-center">
                     <p className="font-mono text-sm text-muted-foreground">
-                      Full-Stack Developer
+                      Full-Stack Web Developer
                     </p>
                   </div>
                 </div>
