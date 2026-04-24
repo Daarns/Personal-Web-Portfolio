@@ -18,8 +18,8 @@ export default function ProjectsNew() {
       longDescription:
         "An ongoing, production-ready e-commerce application engineered with Clean Architecture. It features JWT role-based access control, advanced stock management using optimistic locking, and a seamless shopping cart experience. The platform is currently integrating the Midtrans payment gateway, utilizing Ngrok for real-time local webhook testing to automate order status synchronization.",
       tech: ["Gin", "Redis", "Docker", "PostgreSQL", "Next.js"],
-      demo: "https://ecommerce-pro-self.vercel.app/",
-      github: "#",
+      demo: "#",
+      github: "https://github.com/Daarns/E-Commerce",
       image: "/assets/Project/e-commerce-platform.png",
       status: "In Progress",
       year: "2026",
