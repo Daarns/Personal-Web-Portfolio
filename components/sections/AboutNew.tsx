@@ -1,34 +1,38 @@
 "use client";
 
-import { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import {useRef} from "react";
+import {motion, useInView} from "framer-motion";
 import StatCard from "../ui/StatCard";
-import { Code, Briefcase, Award, GraduationCap, MapPin, Calendar, Download } from "lucide-react";
+import {
+  Code,
+  Briefcase,
+  Award,
+  GraduationCap,
+  MapPin,
+  Calendar,
+  Download,
+} from "lucide-react";
 import Image from "next/image";
 
 export default function AboutNew() {
   const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: "-100px" });
+  const inView = useInView(ref, {once: true, margin: "-100px"});
 
   const stats = [
-    { icon: Briefcase, value: "1+", label: "Years Experience", delay: 0 },
-    { icon: Code, value: "15+", label: "Projects Built", delay: 100 },
-    { icon: Award, value: "10+", label: "Tech Stack", delay: 200 },
-    { icon: GraduationCap, value: "3.81", label: "GPA", delay: 300 },
+    {icon: Briefcase, value: "1+", label: "Years Experience", delay: 0},
+    {icon: Code, value: "15+", label: "Projects Built", delay: 100},
+    {icon: Award, value: "10+", label: "Tech Stack", delay: 200},
+    {icon: GraduationCap, value: "3.81", label: "GPA", delay: 300},
   ];
 
   return (
-    <section
-      id="about"
-      className="py-20 md:py-32 px-6 bg-muted/30"
-      ref={ref}
-    >
+    <section id="about" className="py-20 md:py-32 px-6 bg-muted/30" ref={ref}>
       <div className="max-w-6xl mx-auto">
         {/* Section Header - Retro Style */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
+          initial={{opacity: 0, y: 20}}
+          animate={inView ? {opacity: 1, y: 0} : {}}
+          transition={{duration: 0.6}}
           className="mb-16"
         >
           <div className="inline-block px-6 py-3 bg-primary/10 border-3 border-primary mb-4">
@@ -42,9 +46,9 @@ export default function AboutNew() {
         <div className="grid lg:grid-cols-3 gap-12 mb-20">
           {/* Left: Profile Photo */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={inView ? { opacity: 1, scale: 1 } : {}}
-            transition={{ delay: 0.2, duration: 0.6 }}
+            initial={{opacity: 0, scale: 0.9}}
+            animate={inView ? {opacity: 1, scale: 1} : {}}
+            transition={{delay: 0.2, duration: 0.6}}
             className="lg:col-span-1"
           >
             <div className="sticky top-24">
@@ -52,27 +56,31 @@ export default function AboutNew() {
               <div className="relative group">
                 <div className="relative aspect-square bg-gradient-to-br from-primary/10 to-secondary/10 border-4 border-foreground retro-shadow overflow-hidden">
                   {/* Replace this with your actual photo */}
-                  <Image 
-                    src="/assets/ProfileCard/mnandana.png" 
+                  <Image
+                    src="/assets/ProfileCard/mnandana.png"
                     alt="Nandana Aruna - Full Stack Developer"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     className="object-cover object-center"
                     priority
                   />
-                  
+
                   {/* Retro Corner Accents */}
                   <div className="absolute top-0 right-0 w-12 h-12 border-r-4 border-t-4 border-accent" />
                   <div className="absolute bottom-0 left-0 w-12 h-12 border-l-4 border-b-4 border-accent" />
                 </div>
-                
+
                 {/* Name & Role Badge */}
                 <div className="mt-4 space-y-2">
                   <div className="px-4 py-2 bg-primary text-white border-3 border-foreground text-center">
-                    <h3 className="font-black uppercase text-lg">Nandana Aruna</h3>
+                    <h3 className="font-black uppercase text-lg">
+                      Nandana Aruna
+                    </h3>
                   </div>
                   <div className="px-4 py-2 bg-card border-2 border-foreground text-center">
-                    <p className="font-mono text-sm text-muted-foreground">Full-Stack Developer</p>
+                    <p className="font-mono text-sm text-muted-foreground">
+                      Full-Stack Developer
+                    </p>
                   </div>
                 </div>
               </div>
@@ -83,51 +91,68 @@ export default function AboutNew() {
           <div className="lg:col-span-2 space-y-12">
             {/* Bio Text */}
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={inView ? { opacity: 1, x: 0 } : {}}
-              transition={{ delay: 0.3, duration: 0.6 }}
+              initial={{opacity: 0, x: 20}}
+              animate={inView ? {opacity: 1, x: 0} : {}}
+              transition={{delay: 0.3, duration: 0.6}}
               className="space-y-6"
             >
               <p className="text-lg text-foreground leading-relaxed">
-                I am a versatile <span className="font-bold text-primary">Full-Stack Developer</span> specializing in 
-                comprehensive web solutions with a growing focus on <span className="font-bold text-secondary">IoT</span> and{" "}
-                <span className="font-bold text-secondary">Computer Vision</span> technologies.
+                Full-Stack Web Developer with hands-on experience building
+                end-to-end web applications using{" "}
+                <span className="font-mono text-primary">Laravel</span>,{" "}
+                <span className="font-mono text-primary">FastAPI</span>, and{" "}
+                <span className="font-mono text-primary">Next.js</span>.
               </p>
-              
+
               <p className="text-lg text-muted-foreground leading-relaxed">
-                My portfolio showcases real-time IoT monitoring systems, AI-powered web scraping platforms, 
-                and healthcare applications built with modern frameworks like <span className="font-mono text-primary">Laravel</span>,{" "}
-                <span className="font-mono text-primary">FastAPI</span>, and <span className="font-mono text-primary">Next.js</span>.
+                During my internship at{" "}
+                <span className="font-bold text-foreground">
+                  CV. Digital Idea Solution
+                </span>
+                , I contributed to legacy system migration and production
+                deployment in real client environments.
               </p>
-              
+
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Through my internship experience at CV. Digital Idea Solutions (DIGIS), I gained practical 
-                expertise in application deployment and hosting. I'm passionate about exploring emerging 
-                technologies, particularly Computer Vision and IoT development.
+                I hold a{" "}
+                <span className="font-bold text-foreground">
+                  BNSP Junior Web Developer
+                </span>{" "}
+                certification and am continuously expanding my skills —
+                currently building a full-scale e-commerce platform using{" "}
+                <span className="font-mono text-primary">Go</span>,{" "}
+                <span className="font-mono text-primary">Docker</span>, and
+                clean architecture principles.
               </p>
 
               {/* Location & Status - Retro Badges */}
               <div className="flex flex-wrap gap-3 pt-4">
                 <div className="flex items-center gap-2 px-4 py-2 bg-card border-2 border-foreground">
                   <MapPin className="w-4 h-4 text-primary" />
-                  <span className="text-sm font-mono font-bold">Malang, Indonesia</span>
+                  <span className="text-sm font-mono font-bold">
+                    Malang, Indonesia
+                  </span>
                 </div>
                 <div className="flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground border-2 border-foreground">
                   <Calendar className="w-4 h-4" />
-                  <span className="text-sm font-mono font-bold">Available for Work</span>
+                  <span className="text-sm font-mono font-bold">
+                    Available for Work
+                  </span>
                 </div>
               </div>
             </motion.div>
 
             {/* Timeline */}
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={inView ? { opacity: 1, x: 0 } : {}}
-              transition={{ delay: 0.5, duration: 0.6 }}
+              initial={{opacity: 0, x: 20}}
+              animate={inView ? {opacity: 1, x: 0} : {}}
+              transition={{delay: 0.5, duration: 0.6}}
               className="space-y-8"
             >
-              <h3 className="text-2xl font-black uppercase mb-6 text-foreground">Journey</h3>
-              
+              <h3 className="text-2xl font-black uppercase mb-6 text-foreground">
+                Journey
+              </h3>
+
               {/* Timeline Items */}
               <div className="space-y-6">
                 {/* Internship */}
@@ -137,7 +162,9 @@ export default function AboutNew() {
                     2024 - 2025
                   </span>
                   <h4 className="text-lg font-bold">Internship at DIGIS</h4>
-                  <p className="text-sm text-muted-foreground">CV. Digital Idea Solutions</p>
+                  <p className="text-sm text-muted-foreground">
+                    CV. Digital Idea Solutions
+                  </p>
                   <p className="text-sm text-muted-foreground mt-1">
                     Web Development • Deploy & Hosting
                   </p>
@@ -165,7 +192,9 @@ export default function AboutNew() {
                     2018 - 2021
                   </span>
                   <h4 className="text-lg font-bold">SMA Negeri 9 Malang</h4>
-                  <p className="text-sm text-muted-foreground">Senior High School</p>
+                  <p className="text-sm text-muted-foreground">
+                    Senior High School
+                  </p>
                 </div>
               </div>
             </motion.div>
@@ -186,9 +215,9 @@ export default function AboutNew() {
 
         {/* Certification Showcase - Horizontal Scroll Carousel (ONLY show if you have cert) */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ delay: 0.8, duration: 0.6 }}
+          initial={{opacity: 0, y: 20}}
+          animate={inView ? {opacity: 1, y: 0} : {}}
+          transition={{delay: 0.8, duration: 0.6}}
           className="relative"
         >
           {/* Header */}
@@ -207,7 +236,6 @@ export default function AboutNew() {
           {/* Scrollable Certificate Container */}
           <div className="overflow-x-auto scrollbar-hide pb-4">
             <div className="flex gap-4 md:gap-6">
-              
               {/* Certificate 1 - BNSP Junior Web Developer */}
               <div className="w-[340px] md:w-[450px] flex-shrink-0">
                 <div className="grid grid-cols-1 gap-3 md:gap-4 h-full">
@@ -222,10 +250,12 @@ export default function AboutNew() {
                         className="object-contain p-2"
                         sizes="(max-width: 768px) 340px, 450px"
                       />
-                      
+
                       {/* Hover Overlay */}
                       <div className="absolute inset-0 bg-primary/90 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
-                        <span className="text-white font-bold uppercase text-xs md:text-sm px-4 text-center">View Certificate</span>
+                        <span className="text-white font-bold uppercase text-xs md:text-sm px-4 text-center">
+                          View Certificate
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -235,13 +265,14 @@ export default function AboutNew() {
                     <div className="inline-block px-3 py-1 bg-amber-500 text-white border-2 border-foreground font-bold uppercase tracking-wide text-xs">
                       BNSP Certified
                     </div>
-                    
+
                     <h4 className="text-lg md:text-xl font-black uppercase text-foreground">
                       Junior Web Developer
                     </h4>
-                    
+
                     <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
-                      Nationally recognized certification from <span className="font-bold text-foreground">BNSP</span>, 
+                      Nationally recognized certification from{" "}
+                      <span className="font-bold text-foreground">BNSP</span>,
                       validating professional web development capabilities.
                     </p>
 
@@ -261,7 +292,6 @@ export default function AboutNew() {
               </div>
 
               {/* Add more certificates here as needed - just duplicate the card above */}
-
             </div>
           </div>
 

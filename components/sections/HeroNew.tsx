@@ -129,13 +129,13 @@ export default function HeroNew() {
           whileHover={{ scale: 1.05, y: -4 }}
         >
           <h2 className="text-2xl md:text-3xl font-bold uppercase tracking-wide">
-            Full-Stack Developer
+            Full-Stack Web Developer
           </h2>
         </motion.div>
 
         {/* Description with Retro Text Reveal */}
         <RetroTextReveal
-          text="Crafting digital experiences with modern technologies and creative solutions. Specializing in web development, IoT, and Computer Vision."
+          text="Curious enough to start, Stubborn enough to finish."
           className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed"
           delay={0.9}
         />

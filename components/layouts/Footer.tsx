@@ -92,7 +92,7 @@ const Footer = () => {
     "FastAPI",
     "MySQL",
     "Figma",
-    "Claude AI",
+    "Github Copilot",
     "React",
   ];
 

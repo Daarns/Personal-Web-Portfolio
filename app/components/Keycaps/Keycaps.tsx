@@ -9,8 +9,6 @@ const keycapsGLB = "/assets/keycaps/keycaps.glb";
 interface TechInfo {
   name: string;
   description: string;
-  level: string;
-  category: string;
 }
 
 interface AnimatedKeycapGroupProps {
@@ -46,63 +44,43 @@ const ANIMATION_CONFIG = {
 const techInfo: Record<string, TechInfo> = {
   nextjs: {
     name: "Next.js",
-    description: "React framework for server-rendered applications",
-    level: "Beginner",
-    category: "Framework"
+    description: "Building performant and SEO-friendly frontends with server-side rendering and optimized routing.",
   },
   php: {
     name: "PHP",
-    description: "Server-side scripting language for web development and backend systems",
-    level: "Intermediate",
-    category: "Programming Language"
+    description: "Server-side scripting for dynamic web applications, frequently used alongside Laravel for backend logic.",
   },
   python: {
     name: "Python",
-    description: "Versatile programming language for web development, data science, and automation",
-    level: "Beginner",
-    category: "Programming Language"
+    description: "Used for web scraping, scripting, and integrating AI services into web applications via REST APIs.",
   },
   react: {
     name: "React",
-    description: "JavaScript library for building user interfaces",
-    level: "Beginner",
-    category: "Library"
+    description: "Building reusable, component-driven UIs for dynamic web applications and interactive dashboards.",
   },
   laravel: {
     name: "Laravel",
-    description: "Elegant PHP framework for rapid web application development",
-    level: "Intermediate",
-    category: "Framework"
+    description: "Developing full-stack web applications and scalable REST API backends with clean, maintainable architecture.",
   },
   claude: {
-    name: "Claude AI",
-    description: "AI assistant for coding and development tasks",
-    level: "Intermediate",
-    category: "AI Tool"
+    name: "GitHub Copilot",
+    description: "AI-powered coding assistant that accelerates development with intelligent code suggestions and completions.",
   },
   mysql: {
     name: "MySQL",
-    description: "Reliable relational database management system for web applications",
-    level: "Intermediate",
-    category: "Database"
+    description: "Designing and optimizing relational databases to support robust, data-driven web applications.",
   },
   fastapi: {
     name: "FastAPI",
-    description: "Modern Python web framework for building high-performance APIs",
-    level: "Beginner",
-    category: "Framework"
+    description: "Building high-performance REST APIs in Python, including AI model integrations and data pipeline services.",
   },
   figma: {
     name: "Figma",
-    description: "Collaborative design tool for UI/UX design and prototyping",
-    level: "Intermediate",
-    category: "Design Tool"
+    description: "Designing UI/UX wireframes and interactive prototypes before translating them into production-ready interfaces.",
   },
   docker: {
     name: "Docker",
-    description: "Platform for developing, shipping, and running applications in containers",
-    level: "Beginner",
-    category: "DevOps Tool"
+    description: "Containerizing development environments and application services to ensure consistency across deployment stages.",
   }
 };
 
@@ -184,7 +162,6 @@ function setMaterialOpacity(object: THREE.Object3D, opacity: number): void {
   }
 }
 
-// 🔧 NEW: Helper functions untuk fix logo positioning
 function isNewKeycap(keycapName: string): boolean {
   const name = keycapName.toLowerCase();
   return ['docker', 'nextjs', 'claude', 'react'].some(tech => name.includes(tech));
@@ -192,8 +169,7 @@ function isNewKeycap(keycapName: string): boolean {
 
 function getLogoPosition(keycap: THREE.Object3D, logo: THREE.Object3D): [number, number, number] {
   const keycapName = keycap.name?.toLowerCase() || '';
-  
-  // For NEW keycaps yang bermasalah, gunakan centered position
+
   if (isNewKeycap(keycapName)) {
     // Fine-tuned positioning per keycap
     if (keycapName.includes('docker')) return [0, 0.12, 0];
@@ -203,7 +179,6 @@ function getLogoPosition(keycap: THREE.Object3D, logo: THREE.Object3D): [number,
     return [0, 0.1, 0]; // Default center
   }
   
-  // For EXISTING keycaps yang sudah benar, gunakan relative position
   return [
     logo.position.x - keycap.position.x,
     logo.position.y - keycap.position.y,
@@ -357,8 +332,7 @@ function AnimatedKeycapGroup({
         ref={keycapRef}
         object={clonedKeycap}
       />
-      
-      {/* 🔧 FIXED: Logo positioning dengan conditional logic */}
+
       {clonedLogo && logo && (
         <group
           ref={logoRef}

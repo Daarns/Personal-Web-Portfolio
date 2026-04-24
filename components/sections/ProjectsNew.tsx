@@ -12,6 +12,20 @@ export default function ProjectsNew() {
 
   const projects = [
     {
+      title: "E-Commerce Platform",
+      description:
+        "Multi-vendor marketplace with buyer-to-seller role switching.",
+      longDescription:
+        "Full-featured marketplace where buyers can become sellers, with comprehensive admin controls for product approval, shipping, and user role management.",
+      tech: ["Gin", "Redis", "Docker", "PostgreSQL", "Next.js"],
+      demo: "https://ecommerce-pro-self.vercel.app/",
+      github: "#",
+      image: "/assets/Project/e-commerce.png",
+      status: "In Progress",
+      year: "2026",
+      category: "E-Commerce",
+    },
+    {
       title: "Chess Web App",
       description:
         "Full-featured chess game with Clean Architecture and SOLID principles.",
@@ -24,34 +38,6 @@ export default function ProjectsNew() {
       status: "Completed",
       year: "2025",
       category: "Web App",
-    },
-    {
-      title: "E-Commerce Platform",
-      description:
-        "Multi-vendor marketplace with buyer-to-seller role switching.",
-      longDescription:
-        "Full-featured marketplace where buyers can become sellers, with comprehensive admin controls for product approval, shipping, and user role management.",
-      tech: ["Next.js", "FastAPI", "Docker", "PostgreSQL"],
-      demo: "https://ecommerce-pro-self.vercel.app/",
-      github: "#",
-      image: "/assets/Project/e-commerce.png",
-      status: "In Progress",
-      year: "2025",
-      category: "E-Commerce",
-    },
-    {
-      title: "Portfolio Website",
-      description:
-        "Modern portfolio with interactive 3D elements and smooth animations.",
-      longDescription:
-        "Responsive portfolio website showcasing projects and skills with interactive 3D keycaps, smooth animations, and modern retro design principles.",
-      tech: ["Next.js", "Three.js", "Framer Motion", "Tailwind CSS"],
-      demo: "#",
-      github: "https://github.com/Daarns/Personal-Web-Portfolio/tree/main",
-      image: "/assets/Project/portofolio.png",
-      status: "Completed",
-      year: "2025",
-      category: "Frontend",
     },
     {
       title: "Web Scraping Platform",

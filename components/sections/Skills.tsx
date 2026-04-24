@@ -6,8 +6,6 @@ import {motion, useInView} from "framer-motion";
 interface TechInfo {
   name: string;
   description: string;
-  level: string;
-  category: string;
 }
 
 const Keycaps3D = dynamic(
@@ -167,17 +165,6 @@ export default function Skills() {
                   animate={{opacity: 1, y: 0}}
                   transition={{delay: 0.2}}
                 >
-                  {hoveredTech.level && (
-                    <span className="px-2 py-1 bg-primary/10 text-primary text-xs font-medium rounded">
-                      {hoveredTech.level}
-                    </span>
-                  )}
-                  <span className="text-muted-foreground text-xs self-center">
-                    •
-                  </span>
-                  <span className="text-muted-foreground text-xs font-medium self-center">
-                    {hoveredTech.category}
-                  </span>
                 </motion.div>
               </motion.div>
             )}
