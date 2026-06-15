@@ -1,15 +1,15 @@
-import HeroNew from '@/components/sections/HeroNew'
-import AboutNew from '@/components/sections/AboutNew'
-import Skills from '@/components/sections/Skills'
-import ProjectsNew from '@/components/sections/ProjectsNew'
+import Hero from '@/components/sections/hero/Hero'
+import About from '@/components/sections/about/About'
+import Skills from '@/components/sections/skills/Skills'
+import Projects from '@/components/sections/projects/Projects'
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-background text-foreground">
-      <HeroNew />
-      <div id="about"><AboutNew /></div>
-      <div id="skills"><Skills /></div>
-      <div id="projects"><ProjectsNew /></div>
+      <Hero />
+      <About />
+      <Skills />
+      <Projects />
     </main>
   )
 }

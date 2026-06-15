@@ -15,16 +15,7 @@ const nextConfig: NextConfig = {
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
 
-  turbopack: {
-  },
-
-  webpack: (config) => {
-    config.module.rules.push({
-      test: /\.(glb|gltf)$/,
-      type: "asset/resource",
-    });
-    return config;
-  },
+  poweredByHeader: false,
 };
 
 export default nextConfig;
